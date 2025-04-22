@@ -13,14 +13,16 @@ jobs:
 
       - name: Use Node.js
         uses: actions/setup-node@v3
-        with: node-version: '18'
+        with:
+          node-version: '18'         # ← must be indented under `with:`
 
       - name: Install deps
         run: npm ci
 
       - name: Set up Python
         uses: actions/setup-python@v4
-        with: python-version: '3.x'
+        with:
+          python-version: '3.x'      # ← also indented
 
       - name: Install Python deps
         run: pip install openai
@@ -32,5 +34,5 @@ jobs:
           chmod +x scripts/auto_fix.py
           ./scripts/auto_fix.py
 
-      - name: Final type-check
+      - name: Final type‑check
         run: npx tsc --noEmit
