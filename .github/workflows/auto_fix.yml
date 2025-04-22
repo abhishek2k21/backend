@@ -1,0 +1,36 @@
+name: 🛠 Auto‑Fix TypeScript Errors
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+
+jobs:
+  auto-fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Use Node.js
+        uses: actions/setup-node@v3
+        with: node-version: '18'
+
+      - name: Install deps
+        run: npm ci
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with: python-version: '3.x'
+
+      - name: Install Python deps
+        run: pip install openai
+
+      - name: Run auto_fix.py
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          chmod +x scripts/auto_fix.py
+          ./scripts/auto_fix.py
+
+      - name: Final type-check
+        run: npx tsc --noEmit
