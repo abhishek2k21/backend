@@ -16,8 +16,9 @@ jobs:
         with:
           node-version: '18'         # ← must be indented under `with:`
 
-      - name: Install deps
-        run: npm ci
+      - name: Install deps (allow legacy peer deps)
+        run: npm install --legacy-peer-deps
+
 
       - name: Set up Python
         uses: actions/setup-python@v4
