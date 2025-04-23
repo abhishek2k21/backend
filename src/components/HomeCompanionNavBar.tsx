@@ -7,6 +7,7 @@ import { Home, ArrowLeft, Video, Bell, Settings, Menu, X, HeartPulse, Refrigerat
 
 interface HomeCompanionNavBarProps {
   onMenuToggle: () => void;
+  
   isMenuOpen: boolean;
 }
 

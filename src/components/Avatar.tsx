@@ -35,7 +35,7 @@ const Avatar = ({ src, alt, className, size = 'md', fallback, glow = false, anim
         sizeClasses[size],
         glow && 'animate-pulse-gentle'
       )}>
-        {!error ? (
+        {!error ? (    
           <div className="w-full h-full flex items-center justify-center">
             <img 
               src={src} 

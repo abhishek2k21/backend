@@ -1,7 +1,7 @@
 {
-  "name": "vite_react_shadcn_ts",
+  "name": "my-backend",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -61,7 +61,7 @@
     "sonner": "^1.5.0",
     "tailwind-merge": "^2.5.2",
     "tailwindcss-animate": "^1.0.7",
-    "three": "^0.133.1",
+    "three": "^0.175.0",
     "vaul": "^0.9.3",
     "zod": "^3.23.8"
   },
@@ -71,6 +71,7 @@
     "@types/node": "^22.5.5",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.4.1",
     "@vitejs/plugin-react-swc": "^3.5.0",
     "autoprefixer": "^10.4.20",
     "eslint": "^9.9.0",
@@ -83,5 +84,10 @@
     "typescript": "^5.5.3",
     "typescript-eslint": "^8.0.1",
     "vite": "^5.4.1"
-  }
+  },
+  "description": "My backend API",
+  "main": "1",
+  "author": "Abhishek Kumar <123145812+abhishek2k21@users.noreply.github.com>",
+  "license": "ISC",
+  "repository": "https://github.com/abhishek2k21/my-backend.git"
 }
